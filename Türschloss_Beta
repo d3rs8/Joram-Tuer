@@ -1,8 +1,8 @@
 import RPi.GPIO as GPIO
-import drivers
-from datetime import datetime
 import time
-from subprocess import check_output
+import datetime
+from demo_opts import get_device
+from luma.core.render import canvas
 
 from mfrc522 import SimpleMFRC522
 
@@ -23,7 +23,7 @@ if Verschlossen == True :
 
 else :
     GPIO.output(RELAIS_1_GPIO, GPIO.LOW)
-    display.lcd_display_string('Open Door')
+    draw.text((device.width - padding - size[0], top + 16), 'Open Door')
     time.sleep (50)
     display.lcd_clear()
 

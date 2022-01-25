@@ -95,7 +95,7 @@ while True:
                             if id == 1075761060547 or card3:
                 
                                 if id == tr:
-                                    id = " Joram Töpfer"
+                                    id = " Joram Toepfer"
                                     GPIO.output(23, GPIO.HIGH)
                                     GPIO.output(24, GPIO.LOW)
                                     Verschlossen == False 
